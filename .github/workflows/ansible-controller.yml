@@ -48,6 +48,6 @@ jobs:
           context: ansible-controller/
           # Path to the Dockerfile
           file: ./ansible-controller/Dockerfile
-          tags: veitsanner/app:${{ github.sha }}
+          tags: ghcr.io/veitsanner/app:${{ github.sha }}
           push: true
           
