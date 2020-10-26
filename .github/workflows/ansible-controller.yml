@@ -9,6 +9,7 @@ on:
     branches: [ master ]
     paths:
       - 'ansible-controller/'
+      - '.github/workflows/ansible-controller.yml' 
   pull_request:
     branches: [ master ]
 
