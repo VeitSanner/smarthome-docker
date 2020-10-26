@@ -31,6 +31,6 @@ jobs:
           # Username used to log against the Docker registry
           username: VeitSanner
           # Password or personal access token used to log against the Docker registry
-          password: ${{ DOCKER_REGISTRY_TOKEN }}
+          password: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
           # Log out from the Docker registry at the end of a job
           logout: true # optional, default is true
