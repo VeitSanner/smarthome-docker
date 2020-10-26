@@ -46,3 +46,6 @@ jobs:
           context: ansible-controller/
           # Path to the Dockerfile
           file: ./ansible-controller/Dockerfile
+          labels: user/app:${{ github.sha }}
+          push: true
+          
