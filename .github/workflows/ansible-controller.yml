@@ -9,6 +9,7 @@ on:
     branches: [ master ]
     paths:
       - 'ansible-controller/'
+      - '.github/workflows/ansible-controller.yml' 
   pull_request:
     branches: [ master ]
 
@@ -25,6 +26,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
+      - name: Run a one-line script
+        run: |
+          echo "github.base_ref="'${{ github.base_ref }}'
+          echo "github.base_ref="${{ github.base_ref }}
       - name: Docker Login
         # You may pin to the exact commit or the version.
         # uses: docker/login-action@adb73476b6e06caddec5db0bc1deacbec8cdd947
