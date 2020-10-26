@@ -46,5 +46,5 @@ jobs:
           # Path to the Dockerfile
           file: ./ansible-controller/Dockerfile
           tags: ghcr.io/veitsanner/ansible-controller:${{ github.sha }}
-          push: ${{ github.base_ref == nil }}
+          push: ${{ github.base_ref == '' }}
           
